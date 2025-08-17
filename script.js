@@ -87,9 +87,9 @@ function loadQuestions(questionBank) {
   const startDate = new Date(2025, 5, 19);
   let diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
 
-  // Cap the day to max 50 days total
+  // Cap the day count to max 50 days (zero-based = 49)
   if (diffDays > 49) {
-    diffDays = 49; // zero-based index, day 50 = 49
+    diffDays = 49;
   }
 
   const container = document.getElementById("question-container");
@@ -98,7 +98,7 @@ function loadQuestions(questionBank) {
   const allQuestions = flattenQuestions(questionBank);
   let currentDay = diffDays + 1;
 
-  if (diffDays >= 0) {
+  if (diffDays >= 0 && currentDay <= 50) {
     let dayBlock = document.createElement("div");
     dayBlock.classList.add("day-block");
     let dayTitle = document.createElement("div");
@@ -138,8 +138,8 @@ function loadQuestions(questionBank) {
     container.appendChild(dayBlock);
   }
 
-  // Loop only through past days up to day 50
-  for (let d = currentDay - 1; d >= 1 && d <= 50; d--) {
+  // Display past days in chronological order (oldest first)
+  for (let d = 1; d <= currentDay - 1 && d <= 50; d++) {
     let dayBlock = document.createElement("div");
     dayBlock.classList.add("day-block");
     let dayTitle = document.createElement("div");

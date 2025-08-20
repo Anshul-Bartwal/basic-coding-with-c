@@ -84,7 +84,7 @@ function flattenQuestions(bank) {
 
 function loadQuestions(questionBank) {
   const today = new Date();
-  const startDate = new Date(2025, 8, 20);
+  const startDate = new Date(2025, 7, 20);
   let diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
 
   // Cap the day count to max 50 days (zero-based = 49)

@@ -1,302 +1,270 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #0057ff;
+  --secondary-color: #0077ff;
+  --background-color: #fafafa;
+  --text-color: #222;
+  --light-text-color: #555;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+  --max-content-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(135deg, #008080 50%, #ff80c0 100%);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
-  padding-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-.window {
-  background: #c0c0c0;
-  border: 3px solid black;
-  width: 700px;
-  max-width: 95vw;
-  box-shadow: 7px 7px 0 #404040, -3px -3px 0 #fff;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+.container {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.title-bar {
-  background: linear-gradient(90deg, #000080, #0040ff, #8000ff);
-  color: white;
-  padding: 8px 12px;
-  font-weight: bold;
-  font-family: "Verdana", sans-serif;
-  text-shadow: 2px 2px 3px black;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 3px solid #404040;
+h1, h2 {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
-.title-bar .buttons .btn {
-  background: #c0c0c0;
-  border: 2px outset #808080;
-  padding: 0 10px;
-  margin-left: 6px;
+.copy-btn {
+  background: transparent;
+  border: none;
   cursor: pointer;
-  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  padding: 0;
+  margin-left: 0.25rem;
+  transition: color var(--transition-speed);
   user-select: none;
-  transition: background-color 0.2s ease;
 }
 
-.title-bar .buttons .btn:hover {
-  background: #fdd835;
-  color: black;
-  border: 2px inset #444;
+.copy-btn:hover {
+  color: var(--secondary-color);
 }
 
-.content {
-  padding: 24px 30px;
-  background: linear-gradient(135deg, #f5f5f5 60%, #ffe4e1 100%);
-  overflow-y: auto;
-  min-height: 350px;
-}
-
-.page-caption {
-  text-align: center;
-  font-size: 26px;
-  font-weight: bold;
-  color: #ff0080;
-  text-shadow: 2px 2px 6px #ffb6c1;
-  margin-bottom: 30px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  letter-spacing: 1.5px;
+.question-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .day-block {
-  background: #fff;
-  border: 3px ridge #808080;
-  margin-bottom: 24px;
-  padding: 18px 20px 20px 20px;
-  box-shadow: 3px 3px 0 #808080;
-  border-radius: 8px;
-  user-select: none;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  padding: 1.5rem;
+  transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+  will-change: transform;
+  cursor: pointer;
+}
+
+.day-block:hover {
+  box-shadow: 0 8px 18px rgba(0, 87, 255, 0.3);
+  transform: translateY(-5px);
 }
 
 .day-title {
-  font-weight: 700;
-  margin-bottom: 14px;
-  color: #003676;
-  background: linear-gradient(90deg, #b0e0e6, #87cefa);
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 20px;
-  letter-spacing: 1px;
-  display: inline-block;
-  box-shadow: 2px 2px 0 #e0e7fd;
-}
-
-.question {
-  border: 2px inset #87cefa;
-  font-size: 16px;
-  border-radius: 12px;
-  margin: 10px 0;
-  padding: 18px 22px 18px 16px;
-  box-shadow: 0 6px 14px rgba(120, 120, 130, 0.12);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  white-space: normal;
-}
-
-.question.current {
-  border: 2px inset #ffcc00;
   font-weight: 600;
-  color: #222;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  user-select: none;
 }
 
-.question.past {
-  filter: grayscale(30%);
-  opacity: 0.85;
-  color: #333;
+/* Question styling with zoom hover */
+.question {
+  border-radius: var(--border-radius);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+  cursor: default;
+  background-color: white;
+  will-change: transform;
 }
 
 .question:hover {
-  background: #ffccff;
-  transform: scale(1.015);
-  cursor: pointer;
-  box-shadow: 0 5px 18px rgba(220, 117, 255, 0.12);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 87, 255, 0.3);
+  transform: translateY(-6px) scale(1.03);
 }
 
-.section-icon {
-  font-size: 25px;
-  margin-right: 14px;
-  flex-shrink: 0;
-  line-height: 1;
+.question.current {
+  border-left: 5px solid var(--primary-color);
+}
+
+.question.past {
+  opacity: 0.85;
 }
 
 .question > div:first-child {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.section-icon {
+  font-size: 1.2rem;
 }
 
 .question p {
-  margin: 0 0 0 36px;
-  white-space: pre-wrap;
-  line-height: 1.35;
+  margin: 0.4rem 0 1rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .testcases {
-  margin-top: 15px;
-  padding-left: 38px;
-  font-size: 14px;
-  color: #222;
-  user-select: text;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--light-text-color);
 }
 
 .testcases summary {
+  font-weight: 600;
   cursor: pointer;
-  font-weight: 700;
-  color: #003676;
-  margin-bottom: 8px;
+  outline-offset: 2px;
   user-select: none;
-  font-size: 15px;
+}
+
+.testcase {
+  margin-top: 0.75rem;
+  padding-left: 8px;
 }
 
 .testcase pre {
-  background: #e8f0ff;
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 13.5px;
-  white-space: pre-wrap;
-  margin: 6px 0 14px 0;
-  box-shadow: inset 0 0 11px #b9d2f8;
-  border: 1px solid #a7c0f6;
+  background: #f0f2f5;
+  border-radius: 5px;
+  padding: 6px 10px;
+  overflow-x: auto;
+  margin: 0.25rem 0 0.75rem;
+  font-family: monospace;
+  font-size: 0.85rem;
 }
 
 .video-link {
   display: inline-block;
-  margin-top: 8px;
-  color: #0066cc;
-  text-decoration: underline;
-  cursor: pointer;
+  margin-top: 0.6rem;
+  color: var(--primary-color);
   font-weight: 600;
-  font-size: 14px;
-  user-select: none;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition-speed);
+}
+
+.video-link:hover {
+  border-color: var(--primary-color);
 }
 
 .notes {
-  background: #fff4e5;
-  border: 1px solid #f0c36d;
-  color: #663c00;
-  padding: 8px 12px;
-  margin-top: 10px;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--light-text-color);
+  background: #f9faff;
+  border-left: 4px solid var(--primary-color);
+  padding: 0.75rem 1rem;
   border-radius: 4px;
   font-style: italic;
-  font-size: 13px;
-  white-space: pre-wrap;
 }
 
-/* Navbar Styles */
-.navbar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #000080;
-  color: white;
-  font-family: "Verdana", sans-serif;
-  font-size: 14px;
-  text-align: center;
-  padding: 10px 0;
-  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.4);
-  user-select: none;
-  z-index: 1000;
+.notes img {
+  border-radius: var(--border-radius);
+  max-width: 100%;
+  display: block;
+  margin-top: 0.5rem;
 }
 
-.nav-content {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-weight: bold;
-}
-
-.heart {
-  display: inline-block;
-  color: #ff3131;
-  animation: heartbeat 1.5s ease-in-out infinite;
-  font-size: 20px;
-  line-height: 1;
-  transform-origin: center;
-}
-
-@keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  25%,
-  75% {
-    transform: scale(1.15);
-  }
-  50% {
-    transform: scale(1);
-  }
-}
-#instruction-panel {
-  background: linear-gradient(90deg, #d0ebff, #99ccff);
-  border: 3px solid #0059b3;
-  border-radius: 10px;
-  padding: 16px 20px;
-  margin-bottom: 20px;
-  color: #003366;
-  font-size: 16px;
-  user-select: text;
-  box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
-}
-
-#instruction-panel h2 {
-  margin-top: 0;
-  font-family: "Verdana", sans-serif;
-  font-weight: 700;
-  color: #00264d;
-}
-
-.copy-btn {
-  margin-left: auto;
-  background: none;
-  border: none;
+details > summary {
   cursor: pointer;
-  font-size: 18px;
-  color: #0077cc;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
   user-select: none;
-  padding: 0 8px;
-  display: flex;
-  align-items: center;
-  transition: color 0.2s ease;
 }
 
-.copy-btn:hover {
-  color: #004080;
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.copy-btn:active {
-  color: #00264d;
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.copy-btn[aria-label]:hover::after {
-  content: attr(aria-label);
-  position: absolute;
-  background: #222;
-  color: #fff;
-  font-size: 12px;
-  padding: 3px 6px;
-  border-radius: 3px;
-  bottom: 120%;
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 0.75;
+@media (min-width: 768px) {
+  .day-block {
+    padding: 2rem;
+  }
+}
+
+/* Collapsible instructions specific styling */
+.instructions details {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.instructions summary {
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  outline-offset: 2px;
+  user-select: none;
+  padding-bottom: 0.5rem;
+}
+
+/* Hide default disclosure triangle */
+.instructions summary::-webkit-details-marker {
+  display: none;
+}
+.instructions summary::marker {
+  content: "";
+}
+
+/* Custom arrow for summary */
+.instructions summary::after {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transform: rotate(0deg);
+  transition: transform 0.25s ease;
+  color: var(--primary-color);
+}
+
+/* Rotate arrow when open */
+.instructions details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.instructions ol {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
 }

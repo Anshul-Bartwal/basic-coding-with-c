@@ -1,50 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Basics of Coding with C</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="window">
-      <div class="title-bar">
-        <span class="title">🎉 Basics of Coding with C 🎉</span>
-        <div class="buttons">
-          <span class="btn">_</span>
-          <span class="btn">□</span>
-          <span class="btn">X</span>
-        </div>
-      </div>
-      <div class="content">
-        <h2 class="page-caption">
-          ✨ Daily Challenge – Learn C the Fun Way ✨
-        </h2>
-        <div id="instruction-panel">
-          <h2>📝 Student Instructions</h2>
-          <p>
-            1. Copy the question statement by clicking the 📋 icon next to the
-            question.<br />
-            2. Paste it as a comment at the top of your program.<br />
-            3. Write your code below the comment.<br />
-            4. Run your code on the provided
-            <strong>Sample Test Cases</strong> and verify the output.<br />
-            5. Push the verified solution to your
-            <strong>GitHub repository</strong>.<br />
-            6. Your GitHub account will be checked on a weekly basis.<br />
-            Please prioritize this process.
-          </p>
-        </div>
-        <div id="question-container"></div>
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>✨ Daily Challenge – 100 Days of Code ✨</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>✨ Daily Challenge – 100 Days of Code ✨</h1>
 
-    <nav class="navbar">
-      <div class="nav-content">
-        Made with <span class="heart">❤️</span> by Soumik &copy; 2025
-      </div>
-    </nav>
+      <section class="instructions">
+        <details>
+          <summary><h2>📝 Student Instructions</h2></summary>
+          <ol>
+            <li>Copy the question statement by clicking the <button aria-label="Copy Question Statement" class="copy-btn">📋</button> icon next to the question.</li>
+            <li>Paste it as a comment at the top of your program.</li>
+            <li>Write your code below the comment.</li>
+            <li>Run your code on the provided <strong>Sample Test Cases</strong> and verify the output.</li>
+            <li>Push the verified solution to your <strong>GitHub repository</strong>.</li>
+            <li>Your GitHub account will be checked on a weekly basis.</li>
+            <li>On completion post your progress on LinkedIn using <strong>#100DaysofCode</strong>.</li>
+            <li><strong>Please prioritize this process.</strong></li>
+          </ol>
+        </details>
+      </section>
 
-    <script src="script.js"></script>
-  </body>
+      <section id="question-container" class="question-container">
+        <!-- Questions will be dynamically loaded here -->
+      </section>
+    </header>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
 </html>

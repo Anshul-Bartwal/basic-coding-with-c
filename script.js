@@ -20,13 +20,11 @@ function createTestCasesElement(testCases) {
 
     const inputLabel = document.createElement("b");
     inputLabel.textContent = `Input ${idx + 1}:`;
-
     const inputPre = document.createElement("pre");
     inputPre.textContent = input;
 
     const outputLabel = document.createElement("b");
     outputLabel.textContent = `Output ${idx + 1}:`;
-
     const outputPre = document.createElement("pre");
     outputPre.textContent = output;
 
@@ -34,7 +32,6 @@ function createTestCasesElement(testCases) {
     container.appendChild(inputPre);
     container.appendChild(outputLabel);
     container.appendChild(outputPre);
-
     details.appendChild(container);
   });
 
@@ -92,10 +89,9 @@ function flattenQuestions(bank) {
 
 function loadQuestions(questionBank) {
   const today = new Date();
-  const startDate = new Date(2025, 7, 20);
+  const startDate = new Date(2025, 7, 21); // Month is 0-indexed: 7 = August
   let diffDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
 
-  // Cap the day count to max 50 days (zero-based = 49)
   if (diffDays > 49) {
     diffDays = 49;
   }
@@ -104,11 +100,12 @@ function loadQuestions(questionBank) {
   container.innerHTML = "";
 
   const allQuestions = flattenQuestions(questionBank);
-
   let currentDay = diffDays + 1;
+
   if (diffDays >= 0 && currentDay <= 50) {
     let dayBlock = document.createElement("div");
     dayBlock.classList.add("day-block");
+    dayBlock.classList.add("scroll-reveal");
 
     let dayTitle = document.createElement("div");
     dayTitle.classList.add("day-title");
@@ -122,7 +119,7 @@ function loadQuestions(questionBank) {
     ) {
       const q = allQuestions[i];
       let qDiv = document.createElement("div");
-      qDiv.classList.add("question", "current");
+      qDiv.classList.add("question", "current", "scroll-reveal");
       qDiv.style.background = q.color;
 
       // Header container with icon and copy button
@@ -141,7 +138,6 @@ function loadQuestions(questionBank) {
       titleSpan.textContent = `Q${q.id} (${q.section})`;
       header.appendChild(titleSpan);
 
-      // Copy button
       const copyBtn = document.createElement("button");
       copyBtn.className = "copy-btn";
       copyBtn.type = "button";
@@ -189,10 +185,11 @@ function loadQuestions(questionBank) {
 
     container.appendChild(dayBlock);
 
-    // Display past days in chronological order (oldest first)
+    // Display past days (oldest first)
     for (let d = 1; d <= currentDay - 1 && d <= 50; d++) {
       let dayBlock = document.createElement("div");
       dayBlock.classList.add("day-block");
+      dayBlock.classList.add("scroll-reveal");
 
       let dayTitle = document.createElement("div");
       dayTitle.classList.add("day-title");
@@ -201,9 +198,8 @@ function loadQuestions(questionBank) {
 
       for (let i = (d - 1) * 2; i < d * 2 && i < allQuestions.length; i++) {
         const q = allQuestions[i];
-
         let qDiv = document.createElement("div");
-        qDiv.classList.add("question", "past");
+        qDiv.classList.add("question", "past", "scroll-reveal");
         qDiv.style.background = q.color;
 
         // Header container with icon and copy button
@@ -222,7 +218,6 @@ function loadQuestions(questionBank) {
         titleSpan.textContent = `Q${q.id} (${q.section})`;
         header.appendChild(titleSpan);
 
-        // Copy button
         const copyBtn = document.createElement("button");
         copyBtn.className = "copy-btn";
         copyBtn.type = "button";
@@ -273,10 +268,31 @@ function loadQuestions(questionBank) {
   }
 }
 
+// Scroll reveal - fade and slide on scroll
+function scrollRevealInit() {
+  const revealElements = document.querySelectorAll('.scroll-reveal');
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+
+    revealElements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('resize', revealOnScroll);
+  revealOnScroll();
+}
+
 window.onload = async () => {
   try {
     const data = await loadQuestionsData();
     loadQuestions(data.questionBank);
+    scrollRevealInit();
   } catch (error) {
     console.error("Failed to load questions data:", error);
     const container = document.getElementById("question-container");

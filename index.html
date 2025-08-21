@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>✨ Daily Challenge – 100 Days of Code ✨</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main class="container">
-    <header>
-      <h1>✨ Daily Challenge – 100 Days of Code ✨</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>✨ Daily Challenge – 100 Days of Code ✨</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <div class="header-container">
+          
+          <h1>✨ Daily Challenge – 100 Days of Code (UPES) ✨</h1>
+          <img src="upes-logo.jpeg" alt="UPES Logo" class="upes-logo" />
+        </div>
+        <section class="instructions">
+          <details>
+            <summary><h2>📝 Student Instructions</h2></summary>
+            <ol>
+              <li>
+                Copy the question statement by clicking the
+                <button aria-label="Copy Question Statement" class="copy-btn">
+                  📋
+                </button>
+                icon next to the question.
+              </li>
+              <li>Paste it as a comment at the top of your program.</li>
+              <li>Write your code below the comment.</li>
+              <li>
+                Run your code on the provided
+                <strong>Sample Test Cases</strong> and verify the output.
+              </li>
+              <li>
+                Push the verified solution to your
+                <strong>GitHub repository</strong>.
+              </li>
+              <li>Your GitHub account will be checked on a weekly basis.</li>
+              <li>
+                On completion post your progress on LinkedIn using
+                <strong>#100DaysofCode</strong>.
+              </li>
+              <li>
+                Submit your progress via the form after completing every 10
+                questions. Submission date will be considered crucial for
+                marking.
+              </li>
+              <li>
+                <strong
+                  ><a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScGUamwK0KjPvowKEBPn3AuOe2s3Rn1IId861m_8mTHe5eLSA/viewform?usp=dialog"
+                    >Form Link</a
+                  ></strong
+                >
+              </li>
+              <li><strong>Please prioritize this process.</strong></li>
+            </ol>
+          </details>
+        </section>
 
-      <section class="instructions">
-        <details>
-          <summary><h2>📝 Student Instructions</h2></summary>
-          <ol>
-            <li>Copy the question statement by clicking the <button aria-label="Copy Question Statement" class="copy-btn">📋</button> icon next to the question.</li>
-            <li>Paste it as a comment at the top of your program.</li>
-            <li>Write your code below the comment.</li>
-            <li>Run your code on the provided <strong>Sample Test Cases</strong> and verify the output.</li>
-            <li>Push the verified solution to your <strong>GitHub repository</strong>.</li>
-            <li>Your GitHub account will be checked on a weekly basis.</li>
-            <li>On completion post your progress on LinkedIn using <strong>#100DaysofCode</strong>.</li>
-            <li>Submit your progress via the form after completing every 10 questions. Submission date will be considered crucial for marking.</li>
-            <li><strong><a href="https://docs.google.com/forms/d/e/1FAIpQLScGUamwK0KjPvowKEBPn3AuOe2s3Rn1IId861m_8mTHe5eLSA/viewform?usp=dialog">Form Link</a></strong>  </li>
-            <li><strong>Please prioritize this process.</strong></li>
-          </ol>
-        </details>
-      </section>
+        <section id="question-container" class="question-container">
+          <!-- Questions will be dynamically loaded here -->
+        </section>
+      </header>
+    </main>
 
-      <section id="question-container" class="question-container">
-        <!-- Questions will be dynamically loaded here -->
-      </section>
-    </header>
-  </main>
-
-  <script src="script.js" defer></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>

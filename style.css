@@ -268,3 +268,23 @@ details > summary {
   margin-bottom: 0.8rem;
   line-height: 1.4;
 }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.upes-logo {
+  height: 100px; /* Adjust size as needed */
+  filter: drop-shadow(0 0 4px rgba(0, 87, 255, 0.7));
+  box-shadow: 0 0 8px rgba(0, 87, 255, 0.6);
+  border-radius: 8px; /* Optional rounded corners */
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+
+.upes-logo:hover {
+  filter: drop-shadow(0 0 6px rgba(0, 87, 255, 0.9));
+  box-shadow: 0 0 12px rgba(0, 87, 255, 0.9);
+}

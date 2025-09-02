@@ -178,7 +178,7 @@
         },
         {
           "id": 18,
-          "text": "Write a program to assign grades based on a percentage input.",
+          "text": "Write a program that accepts a percentage (0-100) and assigns a grade based on the following criteria: 90-100: Grade A, 80-89: Grade B, 70-79: Grade C, 60-69: Grade D, below 60: Grade F.",
           "testCases": [
             { "input": "95", "output": "Grade A" },
             { "input": "82", "output": "Grade B" },
@@ -222,7 +222,7 @@
         },
         {
           "id": 23,
-          "text": "Write a program to calculate a library fine based on late days.",
+          "text": "Write a program to calculate library fine based on late days as follows: Up to 5 days late: ₹2/day; 6-10 days late: ₹4/day; 11-30 days late: ₹6/day; More than 30 days: Membership Cancelled.",
           "testCases": [
             { "input": "4", "output": "Fine ₹8" },
             { "input": "8", "output": "Fine ₹32" },
@@ -232,7 +232,7 @@
         },
         {
           "id": 24,
-          "text": "Write a program to calculate an electricity bill based on units consumed.",
+          "text": "Write a program to calculate electricity bill based on units consumed with these rates: first 100 units at ₹5/unit, next 100 units (i.e. units 101 to 200) at ₹7/unit, and units above 200 at ₹10/unit.",
           "testCases": [
             { "input": "50", "output": "Bill: ₹250" },
             { "input": "150", "output": "Bill: ₹950" },

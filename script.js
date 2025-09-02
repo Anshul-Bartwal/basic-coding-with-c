@@ -168,7 +168,8 @@ function loadQuestions(questionBank) {
       qDiv.appendChild(header);
 
       const questionText = document.createElement("p");
-      questionText.textContent = q.text;
+      //questionText.textContent = q.text;
+      questionText.innerHTML = q.text.replace(/\n/g, "<br>");
       qDiv.appendChild(questionText);
 
       const testCaseElement = createTestCasesElement(q.testCases);
@@ -248,7 +249,8 @@ function loadQuestions(questionBank) {
         qDiv.appendChild(header);
 
         const questionText = document.createElement("p");
-        questionText.textContent = q.text;
+        //questionText.textContent = q.text;
+        questionText.innerHTML = q.text.replace(/\n/g, "<br>");
         qDiv.appendChild(questionText);
 
         const testCaseElement = createTestCasesElement(q.testCases);

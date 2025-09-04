@@ -225,19 +225,19 @@
           "text": "Write a program to calculate library fine based on late days as follows: \nFirst 5 days late: ₹2/day \nNext 5 days late: ₹4/day \nNext 20 days days late: ₹6/day \nMore than 30 days: Membership Cancelled.",
           "testCases": [
             { "input": "4", "output": "Fine ₹8" },
-            { "input": "8", "output": "Fine ₹32" },
-            { "input": "15", "output": "Fine ₹90" },
+            { "input": "8", "output": "Fine ₹22" },
+            { "input": "15", "output": "Fine ₹60" },
             { "input": "31", "output": "Membership Cancelled" }
           ]
         },
         {
-"id": 24,
-  "text": "Write a program to calculate electricity bill based on units consumed with these rates: \nFirst 100 units at ₹5/unit \nNext 100 units at ₹7/unit \nNext 100 units at ₹10/unit \nAbove at ₹12/unit",
-  "testCases": [
-    { "input": "50", "output": "Bill: ₹250" },
-    { "input": "150", "output": "Bill: ₹850" },
-    { "input": "250", "output": "Bill: ₹1700" }
-  ]
+          "id": 24,
+          "text": "Write a program to calculate electricity bill based on units consumed with these rates: \nFirst 100 units at ₹5/unit \nNext 100 units at ₹7/unit \nNext 100 units at ₹10/unit \nAbove at ₹12/unit",
+          "testCases": [
+            { "input": "50", "output": "Bill: ₹250" },
+            { "input": "150", "output": "Bill: ₹850" },
+            { "input": "250", "output": "Bill: ₹1700" }
+          ]
         },
         {
           "id": 25,

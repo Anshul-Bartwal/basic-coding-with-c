@@ -446,11 +446,11 @@
         },
         {
           "id": 50,
-          "text": "Write a program to print the following pattern:\n*****\n  ****\n    ***\n      **\n        *",
+          "text": "Write a program to print the following pattern:\n*****\n ****\n  ***\n   **\n    *",
           "testCases": [
             {
               "input": "",
-              "output": "*****\n  ****\n    ***\n      **\n        *"
+              "output": "*****\n ****\n  ***\n   **\n    *"
             },
             { "input": "", "output": "Note: Spaces indicate indentation." }
           ]
@@ -484,7 +484,7 @@
         },
         {
           "id": 54,
-          "text": "Write a program to print the following pattern:\n\n*\n\n***\n\n*****\n*******\n***\n\n*\n\n",
+          "text": "Write a program to print the following pattern:\n\n   *\n  ***\n *****\n*******\n *****\n  ***\n   *\n",
           "testCases": [
             { "input": "", "output": "Pattern with layers of stars as shown." }
           ]

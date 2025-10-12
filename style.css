@@ -288,3 +288,77 @@ details > summary {
   filter: drop-shadow(0 0 6px rgba(0, 87, 255, 0.9));
   box-shadow: 0 0 12px rgba(0, 87, 255, 0.9);
 }
+/* Base styling for the #flash div to make it badge-like */
+#flash {
+  display: inline-block;  /* Inline to fit within h2 */
+  padding: 4px 8px;  /* Small padding for badge appearance */
+  border-radius: 12px;  /* Rounded corners */
+  font-weight: bold;  /* Emphasize text */
+  font-size: 0.2em;  /* Slightly smaller */
+  margin-left: 10px;  /* Space from "Student Instructions" */
+  animation: flashy-blink 0.8s ease-in-out infinite alternate;  /* Core animation */
+  color: #ff0000;  /* Initial red text */
+  background-color: #ffff00;  /* Initial yellow background */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);  /* Initial red glow */
+  transition: all 0.1s ease;  /* Smooth color shifts */
+}
+
+/* Keyframe for flashy blinking: Color swap and glow pulse */
+@keyframes flashy-blink {
+  0% {
+    color: #ff0000;  /* Red text */
+    background-color: #ffff00;  /* Yellow background */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.5);  /* Intense red glow */
+    transform: scale(1);  /* Normal size */
+  }
+  50% {
+    color: #ffff00;  /* Yellow text */
+    background-color: #ff0000;  /* Red background */
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.8), 0 0 10px rgba(255, 255, 0, 0.5);  /* Intense yellow glow */
+    transform: scale(1.05);  /* Slight pulse for flashiness */
+  }
+  100% {
+    color: #ff0000;
+    background-color: #ffff00;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.5);
+    transform: scale(1);
+  }
+}
+
+/* Vendor prefixes for cross-browser support (e.g., older WebKit) */
+@-webkit-keyframes flashy-blink {
+  0% {
+    color: #ff0000;
+    background-color: #ffff00;
+    -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    color: #ffff00;
+    background-color: #ff0000;
+    -webkit-box-shadow: 0 0 5px rgba(255, 255, 0, 0.8), 0 0 10px rgba(255, 255, 0, 0.5);
+    transform: scale(1.05);
+  }
+  100% {
+    color: #ff0000;
+    background-color: #ffff00;
+    -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.5);
+    transform: scale(1);
+  }
+}
+
+#flash {
+  -webkit-animation: flashy-blink 0.8s ease-in-out infinite alternate;
+  animation: flashy-blink 0.8s ease-in-out infinite alternate;
+}
+
+/* Ensure visibility in collapsed <details> summary */
+.instructions summary h2 #flash {
+  visibility: visible;  /* Prevent hidden state */
+}
+
+/* Optional: Hover pause for usability */
+#flash:hover {
+  animation-play-state: paused;  /* Stop flashing on hover */
+  transform: scale(1.1);  /* Slight enlargement on hover */
+}

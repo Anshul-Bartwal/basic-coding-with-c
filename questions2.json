@@ -1,0 +1,116 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "title": "Print HelloWorld",
+      "link": "https://www.hackerrank.com/challenges/hello-world-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 2,
+      "title": "Playing with characters",
+      "link": "https://www.hackerrank.com/challenges/playing-with-characters/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 3,
+      "title": "Sum and Difference of Two Numbers",
+      "link": "https://www.hackerrank.com/challenges/sum-numbers-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 4,
+      "title": "Greatest of four using separate function",
+      "link": "https://www.hackerrank.com/challenges/functions-in-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 5,
+      "title": "Pointer Demonstration",
+      "link": "https://www.hackerrank.com/challenges/pointer-in-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 6,
+      "title": "Condition Statements in C",
+      "link": "https://www.hackerrank.com/challenges/conditional-statements-in-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 7,
+      "title": "For Loop in C",
+      "link": "https://www.hackerrank.com/challenges/for-loop-in-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 8,
+      "title": "Sum of Digits of a Five Digit Number",
+      "link": "https://www.hackerrank.com/challenges/sum-of-digits-of-a-five-digit-number/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 9,
+      "title": "Bitwise Operators",
+      "link": "https://www.hackerrank.com/challenges/bitwise-operators-in-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 10,
+      "title": "Printing Pattern Using Loops",
+      "link": "https://www.hackerrank.com/challenges/printing-pattern-2/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 11,
+      "title": "1D Arrays in C",
+      "link": "https://www.hackerrank.com/challenges/1d-arrays-in-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 12,
+      "title": "Array Reversal",
+      "link": "https://www.hackerrank.com/challenges/reverse-array-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 13,
+      "title": "Printing Tokens",
+      "link": "https://www.hackerrank.com/challenges/printing-tokens-/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 14,
+      "title": "Digit Frequency",
+      "link": "https://www.hackerrank.com/challenges/frequency-of-digits-1/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 15,
+      "title": "Dynamic Array in C",
+      "link": "https://www.hackerrank.com/challenges/dynamic-array-in-c/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    },
+    {
+      "id": 16,
+      "title": "Student Marks Sum",
+      "link": "https://www.hackerrank.com/challenges/students-marks-sum/problem?isFullScreen=true",
+      "notes": "",
+      "youtube_link": ""
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+      "id": 51,
+      "title": "Toeplitz matrix",
+      "link": "https://www.geeksforgeeks.org/problems/toeplitz-matrix/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 52,
+      "title": "Number Pattern",
+      "link": "https://www.geeksforgeeks.org/problems/number-pattern0517/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 53,
+      "title": "Second Largest",
+      "link": "https://www.geeksforgeeks.org/problems/second-largest3735/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 54,
+      "title": "Third largest element",
+      "link": "https://www.geeksforgeeks.org/problems/third-largest-element/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 55,
+      "title": "Maximum Occuring Character",
+      "link": "https://www.geeksforgeeks.org/problems/maximum-occuring-character-1587115620/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 56,
+      "title": "Uncommon characters",
+      "link": "https://www.geeksforgeeks.org/problems/uncommon-characters4932/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 57,
+      "title": "Remove Consecutive Characters",
+      "link": "https://www.geeksforgeeks.org/problems/consecutive-elements2306/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 58,
+      "title": "Replace all 0's with 5",
+      "link": "https://www.geeksforgeeks.org/problems/replace-all-0s-with-5/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 59,
+      "title": "Exceptionally odd",
+      "link": "https://www.geeksforgeeks.org/problems/find-the-odd-occurence4820/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 60,
+      "title": "Repeated Character",
+      "link": "https://www.geeksforgeeks.org/problems/repeated-character/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 61,
+      "title": "Number is sparse or not",
+      "link": "https://www.geeksforgeeks.org/problems/number-is-sparse-or-not/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 62,
+      "title": "Leap Year",
+      "link": "https://www.geeksforgeeks.org/problems/leap-year0943/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 63,
+      "title": "Pattern 1",
+      "link": "https://www.geeksforgeeks.org/problems/pattern-1/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 64,
+      "title": "Pattern 2",
+      "link": "https://www.geeksforgeeks.org/problems/pattern-2/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 65,
+      "title": "Maximum product of two numbers",
+      "link": "https://www.geeksforgeeks.org/problems/maximum-product-of-two-numbers/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 66,
+      "title": "Check if a number is power of another number",
+      "link": "https://www.geeksforgeeks.org/problems/check-if-a-number-is-power-of-another-number/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 67,
+      "title": "Merge two strings",
+      "link": "https://www.geeksforgeeks.org/problems/merge-two-strings2736/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 68,
+      "title": "Doubling the value",
+      "link": "https://www.geeksforgeeks.org/problems/doubling-the-value4859/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 69,
+      "title": "Find all factorial numbers less than or equal to N",
+      "link": "https://www.geeksforgeeks.org/problems/find-all-factorial-numbers-less-than-or-equal-to-n3548/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 70,
+      "title": "Average in a stream",
+      "link": "https://www.geeksforgeeks.org/problems/average4856/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 71,
+      "title": "Square root of a number",
+      "link": "https://www.geeksforgeeks.org/problems/square-root/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 72,
+      "title": "Intersection of two arrays",
+      "link": "https://www.geeksforgeeks.org/problems/intersection-of-two-arrays2404/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 73,
+      "title": "Union of Two Sorted Arrays",
+      "link": "https://www.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 74,
+      "title": "Check if array is sorted",
+      "link": "https://www.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 75,
+      "title": "GCD of two numbers",
+      "link": "https://www.geeksforgeeks.org/problems/gcd-of-two-numbers3459/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 76,
+      "title": "Fascinating Number",
+      "link": "https://www.geeksforgeeks.org/problems/fascinating-number3751/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 77,
+      "title": "Game with nos",
+      "link": "https://www.geeksforgeeks.org/problems/game-with-nos3123/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 78,
+      "title": "Perfect Square",
+      "link": "https://www.geeksforgeeks.org/problems/check-perfect-square2503/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 79,
+      "title": "Prime Number",
+      "link": "https://www.geeksforgeeks.org/problems/prime-number2314/1",
+      "video_link": "",
+      "notes": ""
+    },
+    {
+      "id": 80,
+      "title": "Minimum Difference among K",
+      "link": "https://www.geeksforgeeks.org/problems/minimum-difference-among-k5805/1",
+      "video_link": "",
+      "notes": ""
+    }

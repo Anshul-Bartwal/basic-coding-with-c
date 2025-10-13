@@ -294,7 +294,7 @@ details > summary {
   padding: 4px 8px;  /* Small padding for badge appearance */
   border-radius: 12px;  /* Rounded corners */
   font-weight: bold;  /* Emphasize text */
-  font-size: 0.2em;  /* Slightly smaller */
+  font-size: 0.5em;  /* Slightly smaller */
   margin-left: 10px;  /* Space from "Student Instructions" */
   animation: flashy-blink 0.8s ease-in-out infinite alternate;  /* Core animation */
   color: #ff0000;  /* Initial red text */

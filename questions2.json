@@ -1011,6 +1011,157 @@
             "type": "text",
             "value": "Follow-up(optional): Can you write a code that runs in O(n) time and without using the division operation."
           }
+        },
+        {
+          "id": 109,
+          "text": "Write a program to take an integer array arr and an integer k as inputs. Print the maximum sum of all the subarrays of size k.",
+          "testCases": [
+            {
+              "input": "arr[100, 200, 300, 400] = , k = 2",
+              "output": "700",
+              "explanation": "arr2 + arr3 = 700, which is maximum."
+            },
+            {
+              "input": "arr[1, 4, 2, 10, 23, 3, 1, 0, 20] = , k = 4",
+              "output": "39",
+              "explanation": "arr1 + arr2 + arr3 + arr4 = 39, which is maximum."
+            },
+            {
+              "input": "arr[100, 200, 300, 400] = , k = 1",
+              "output": "400",
+              "explanation": "arr3 = 400, which is maximum."
+            }
+          ]
+        },
+        {
+          "id": 110,
+          "text": "Write a program to take an integer array arr and an integer k as inputs. The task is to find the maximum element in each subarray of size k moving from left to right. Print the maximum elements for each window separated by spaces as output.",
+          "testCases": [
+            {
+              "input": "arr[1, 2, 3, 1, 4, 5, 2, 3, 6] = , k = 3",
+              "output": "3 3 4 5 5 5 6",
+              "explanation": "1st contiguous subarray , max = 3; 2nd contiguous subarray , max = 3; 3rd contiguous subarray , max = 4; 4th contiguous subarray , max = 5; 5th contiguous subarray , max = 5; 6th contiguous subarray , max = 5; 7th contiguous subarray , max = 6."
+            },
+            {
+              "input": "arr[5, 1, 3, 4, 2] = , k = 1",
+              "output": "5 1 3 4 2",
+              "explanation": "When k = 1, each element in the array is its own subarray, so the output is simply the same array."
+            }
+          ]
+        },
+        {
+          "id": 111,
+          "text": "Write a program to take an integer array arr and an integer k as inputs. The task is to find the first negative integer in each subarray of size k moving from left to right. If no negative exists in a window, print \"0\" for that window. Print the results separated by spaces as output.",
+          "testCases": [
+            {
+              "input": "arr[] = [-8, 2, 3, -6, 10], k = 2",
+              "output": "-8 0 -6 -6",
+              "explanation": "Window [-8, 2] First negative integer is -8. Window No negative integers, output is 0. Window [3, -6] First negative integer is -6. Window [-6, 10] First negative integer is -6."
+            },
+            {
+              "input": "arr[] = [12, -1, -7, 8, -15, 30, 16, 28], k = 3",
+              "output": "-1 -1 -7 -15 -15 0",
+              "explanation": "Window [12, -1, -7] First negative integer is -1. Window [-1, -7, 8] First negative integer is -1. Window [-7, 8, -15] First negative integer is -7. Window [8, -15, 30] First negative integer is -15. Window [-15, 30, 16] First negative integer is -15. Window No negative integers, output is 0."
+            },
+            {
+              "input": "arr[] = [12, 1, 3, 5], k = 3",
+              "output": "0 0",
+              "explanation": "Window No negative integers, output is 0. Window No negative integers, output is 0."
+            }
+          ]
+        },
+        {
+          "id": 112,
+          "text": "Write a program to take an integer array arr as input. The task is to find the maximum sum of any contiguous subarray using Kadane's algorithm. Print the maximum sum as output. If all elements are negative, print the largest (least negative) element.",
+          "testCases": [
+            {
+              "input": "arr[] = [2, 3, -8, 7, -1, 2, 3]",
+              "output": "11",
+              "explanation": "The subarray [7, -1, 2, 3] has the largest sum 11."
+            },
+            {
+              "input": "arr[] = [-2, -4]",
+              "output": "-2",
+              "explanation": "The subarray [-2] has the largest sum -2."
+            },
+            {
+              "input": "arr[] = [5, 4, 1, 7, 8]",
+              "output": "25",
+              "explanation": "The subarray has the largest sum 25."
+            }
+          ]
+        },
+        {
+          "id": 113,
+          "text": "Write a program to take an integer array arr and an integer k as inputs. The task is to find the kth smallest element in the array. Print the kth smallest element as output.",
+          "testCases": [
+            {
+              "input": "arr[] = [10, 5, 4, 3, 48, 6, 2, 33, 53, 10], k = 4",
+              "output": "5",
+              "explanation": "4th smallest element in the given array is 5."
+            },
+            {
+              "input": "arr[] = [7, 10, 4, 3, 20, 15], k = 3",
+              "output": "7",
+              "explanation": "3rd smallest element in the given array is 7."
+            }
+          ]
+        },
+        {
+          "id": 114,
+          "text": "Write a program to take a string s as input. The task is to find the length of the longest substring without repeating characters. Print the length as output.",
+          "testCases": [
+            {
+              "input": "s = \"abcabcbb\"",
+              "output": "3",
+              "explanation": "The answer is \"abc\", with the length of 3. Note that \"bca\" and \"cab\" are also correct answers."
+            },
+            {
+              "input": "s = \"bbbbb\"",
+              "output": "1",
+              "explanation": "The answer is \"b\", with the length of 1."
+            },
+            {
+              "input": "s = \"pwwkew\"",
+              "output": "3",
+              "explanation": "The answer is \"wke\", with the length of 3. Notice that the answer must be a substring, \"pwke\" is a subsequence and not a substring."
+            }
+          ]
+        },
+        {
+          "id": 115,
+          "text": "Write a program to take two strings s and t as inputs (assume all characters are lowercase). The task is to determine if s and t are valid anagrams, meaning they contain the same characters with the same frequencies. Print \"Anagram\" if they are, otherwise \"Not Anagram\".",
+          "testCases": [
+            {
+              "input": "s = \"anagram\", t = \"nagaram\"",
+              "output": "Anagram",
+              "explanation": "The strings contain the same characters with the same frequencies."
+            },
+            {
+              "input": "s = \"rat\", t = \"car\"",
+              "output": "Not Anagram",
+              "explanation": "The strings do not contain the same characters."
+            }
+          ]
+        },
+        {
+          "id": 116,
+          "text": "Write a program to take an integer array nums which contains only positive integers, and an integer target as inputs. The goal is to find two distinct indices i and j in the array such that nums[i] + nums[j] equals the target. Assume exactly one solution exists and return the indices in any order. Print the two indices separated by a space as output. If no solution exists, print \"-1 -1\".",
+          "testCases": [
+            {
+              "input": "nums = [2,7,11,15], target = 9",
+              "output": "0 1",
+              "explanation": "Because nums[0] + nums[1] == 9, we return [0, 1]."
+            },
+            {
+              "input": "nums = [3,2,4], target = 6",
+              "output": "1 2"
+            },
+            {
+              "input": "nums = [3,3], target = 6",
+              "output": "0 1"
+            }
+          ]
         }
       ]
     }

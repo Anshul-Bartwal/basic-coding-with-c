@@ -993,6 +993,24 @@
             "type": "text",
             "value": "Try solving this using brute force (nested loop). No need of attempting the optimized stack-based solution."
           }
+        },
+        {
+          "id": 108,
+          "text": "Write a Program to take an integer array nums. Print an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]. The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.",
+          "testCases": [
+            {
+              "input": "nums = [1,2,3,4]",
+              "output": "[24,12,8,6]"
+            },
+            {
+              "input": "nums = [-1,1,0,-3,3]",
+              "output": "[0,0,9,0,0]"
+            }
+          ],
+          "notes": {
+            "type": "text",
+            "value": "Follow-up(optional): Can you write a code that runs in O(n) time and without using the division operation."
+          }
         }
       ]
     }
